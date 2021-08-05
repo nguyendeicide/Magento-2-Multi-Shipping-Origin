@@ -4,5 +4,5 @@ Second shipping origin address for magento:
 - Filter for US states only
 - Multi sites setup
 
+![multi-shipping-origin-setup](https://user-images.githubusercontent.com/12710919/128332219-2b9ef7be-120a-4e72-9451-2bb81a2dd4ea.png)
 
-![Screenshot at Aug 03 22-45-59](https://user-images.githubusercontent.com/12710919/128331853-11f76d03-e8a4-4659-a370-e36d0cbbea0b.png)
