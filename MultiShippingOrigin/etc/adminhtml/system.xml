@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>        
+         <section id="shipping">            
+            <tab>sales</tab>
+            <resource>Acidpos_MultiShippingOrigin::config_acidpos_multiShippingOrigin</resource>
+            <group id="multi_shipping_origin" translate="label" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Secondary - by AcidPOS</label>
+                <field id="active" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select "Yes" to enable the module.</comment>
+                </field> 
+                <field id="country_id" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Country</label>
+                    <frontend_class>countries</frontend_class>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="region_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Region/State</label>
+                </field>
+                <field id="postcode" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>ZIP/Postal Code</label>
+                </field>
+                <field id="city" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>City</label>
+                </field>
+                <field id="street_line1" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Street Address</label>
+                </field>
+                <field id="street_line2" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Street Address Line 2</label>
+                </field>
+                <field id="apply_methods" translate="label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0" type="multiselect">
+                    <label>Apply for shipping methods</label>      
+                    <can_be_empty>1</can_be_empty>              
+                    <source_model>Acidpos\MultiShippingOrigin\Model\Config\Source\AllShippingMethods</source_model>
+                </field>
+                <field id="use_for_us_state" translate="label" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="0" type="multiselect">
+                    <label>Use for US states</label>      
+                    <can_be_empty>1</can_be_empty>              
+                    <source_model>Acidpos\MultiShippingOrigin\Model\Config\Source\AllUsStates</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

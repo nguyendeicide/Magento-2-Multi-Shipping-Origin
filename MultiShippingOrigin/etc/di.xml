@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+  ~ NOTICE OF LICENSE
+  ~ The contents of this file are subject to the Lifetime Media Group, Inc. Public License Version 1.1 (the "License");
+  ~ you may not use this file except in compliance with the License. You may obtain a copy and view the license at
+  ~ https://www.lifetimemediagroup.com/license-agreement
+  ~
+  ~ DISCLAIMER
+  ~ Redistribution of this code is strictly prohibited and trackable. Each user must obtain legal license to use this software.
+  ~ Please also note: Do not edit or add to this file if you wish to upgrade in the future.
+  ~
+  ~ @category    Lifetime Media Group POS
+  ~ @package     lifetime_pos
+  ~ @copyright   Copyright (c) 2021 Lifetime Media Group, Inc. (https://www.lifetimemediagroup.com)
+  ~ @license     https://www.lifetimemediagroup.com/license-agreement
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--preference for="Magento\Shipping\Model\Shipping" type="Acidpos\MultiShippingOrigin\Model\Rewrite\Shipping" /-->
+    <preference for="Magento\Ups\Model\Carrier" type="Acidpos\MultiShippingOrigin\Model\Rewrite\Ups\Carrier" />
+    <preference for="Magento\Usps\Model\Carrier" type="Acidpos\MultiShippingOrigin\Model\Rewrite\Usps\Carrier" />
+    <preference for="Magento\Fedex\Model\Carrier" type="Acidpos\MultiShippingOrigin\Model\Rewrite\Fedex\Carrier" />
+</config>	

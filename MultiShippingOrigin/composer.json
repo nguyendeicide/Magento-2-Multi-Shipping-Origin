@@ -1,0 +1,28 @@
+{
+    "name": "acidpos/module-multi-shipping-origin",
+    "description": "Admin multi shipping origin address",
+    "require": {
+        "magento/module-store": ">100.0",
+        "magento/module-backend": ">100.0",
+        "magento/framework": ">100.0"
+    },
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+          "name": "Acidpos",
+          "email": "acidpos@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Acidpos\\LowStockNotification\\": ""
+        }
+    }
+}
